@@ -6,8 +6,7 @@ let load = true;
 
 const getCountryID = (country, list) => {
   for (let i = 0; i < list.length; i += 1) {
-    if(list[i].pais_name === country)
-    return list[i].pais_id;
+    if (list[i].pais_name === country) return list[i].pais_id;
   }
   return 'Not found';
 };
@@ -26,8 +25,8 @@ const CountriesList = () => {
   let counter = 0;
   countryCount.forEach((country) => {
     countryList.push(
-      <li onClick={() => {dispatch(getStatesThunk(getCountryID(country[0], IDList)))}}>
-        <Link to="country">
+      <li>
+        <Link to="country" onClick={() => { dispatch(getStatesThunk(getCountryID(country[0], IDList))); }}>
           {country[0]}
           :
           {' '}
