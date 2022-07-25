@@ -7,14 +7,23 @@ const HomePage = () => {
   useEffect(() => {
     dispatch(getCountryFireCountThunk());
   }, []);
+
   const countryCount = useSelector((state) => state.country.countryCount);
-  console.log(countryCount);
+  let countryList = [];
   let counter = 0;
   countryCount.forEach((country) => {
+    countryList.push(<li>{country[0]}</li>);
     counter += country[1];
   })
 
-  return (<p>Daily focused fire count in South America: {counter}</p>);
+  return (
+    <>
+      <h2>Daily focused fire count in South America: {counter}</h2>
+      <ul>
+        {countryList}
+      </ul>
+    </>
+  );
 };
 
 export default HomePage;
