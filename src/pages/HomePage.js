@@ -1,27 +1,9 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getCountryFireCountThunk } from '../redux/CountrySlice';
+import CountriesList from "../components/CountriesList";
 
 const HomePage = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getCountryFireCountThunk());
-  }, []);
-
-  const countryCount = useSelector((state) => state.country.countryCount);
-  let countryList = [];
-  let counter = 0;
-  countryCount.forEach((country) => {
-    countryList.push(<li>{country[0]}: {country[1]}</li>);
-    counter += country[1];
-  })
-
   return (
     <>
-      <h2>Daily focused fire count in South America: {counter}</h2>
-      <ul>
-        {countryList}
-      </ul>
+      <CountriesList />
     </>
   );
 };
