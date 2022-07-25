@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getCountryFireCountThunk } from '../redux/Thunks';
+import { getCountryFireCountThunk, getCountriesThunk } from '../redux/Thunks';
 
 let load = true;
 
@@ -9,6 +9,7 @@ const CountriesList = () => {
   if (load) {
     load = false;
     dispatch(getCountryFireCountThunk());
+    dispatch(getCountriesThunk());
   }
 
   const countryCount = useSelector((state) => state.country.countryCount);
