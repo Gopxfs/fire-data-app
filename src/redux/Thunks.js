@@ -18,11 +18,11 @@ export const getCountriesThunk = createAsyncThunk(
   }
 );
 
-// export const getStatesThunk = createAsyncThunk(
-//   'fireData/getStates',
-//   async (country) => {
-//     const response = await fetch('')
-//   },
-// );
+export const getStatesThunk = createAsyncThunk(
+  'fireData/getStates',
+  async (id) => {
+    console.log(id);
+  },
+);
 
 export default getCountryFireCountThunk;
