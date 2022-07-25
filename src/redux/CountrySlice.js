@@ -1,12 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { getCountryFireCountThunk } from './Thunks';
 
 const CountrySlice = createSlice({
   name: 'country',
   initialState: {
-
+    countryCount: [],
+    countryStates: [],
   },
-  reducers: {
-
+  extraReducers: {
+    [getCountryFireCountThunk.fulfilled]: (state, { payload }) => ({
+      countryCount: Object.entries(payload),
+    }),
   },
 });
 
