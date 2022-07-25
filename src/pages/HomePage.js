@@ -12,7 +12,7 @@ const HomePage = () => {
   let countryList = [];
   let counter = 0;
   countryCount.forEach((country) => {
-    countryList.push(<li>{country[0]}</li>);
+    countryList.push(<li>{country[0]}: {country[1]}</li>);
     counter += country[1];
   })
 
