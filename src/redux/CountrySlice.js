@@ -8,11 +8,9 @@ const CountrySlice = createSlice({
     countryStates: [],
   },
   extraReducers: {
-    [getCountryFireCountThunk.fulfilled]: (state, { payload }) => {
-      return {
-        countryCount: Object.entries(payload),
-      };
-    },
+    [getCountryFireCountThunk.fulfilled]: (state, { payload }) => ({
+      countryCount: Object.entries(payload),
+    }),
   },
 });
 

@@ -1,4 +1,4 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const getCountryFireCountThunk = createAsyncThunk(
   'fireData/getData',
@@ -8,5 +8,12 @@ export const getCountryFireCountThunk = createAsyncThunk(
     return response;
   },
 );
+
+// export const getStates = createAsyncThunk(
+//   'fireData/getStates',
+//   async () => {
+//     const response = await fetch();
+//   },
+// );
 
 export default getCountryFireCountThunk;

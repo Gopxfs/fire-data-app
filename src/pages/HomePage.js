@@ -1,11 +1,9 @@
-import CountriesList from "../components/CountriesList";
+import CountriesList from '../components/CountriesList';
 
-const HomePage = () => {
-  return (
-    <>
-      <CountriesList />
-    </>
-  );
-};
+const HomePage = () => (
+  <>
+    <CountriesList />
+  </>
+);
 
 export default HomePage;
