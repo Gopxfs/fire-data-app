@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getCountryFireCountThunk, getCountriesThunk, getStatesThunk, getStateFireCountThunk } from './Thunks';
+import {
+  getCountryFireCountThunk, getCountriesThunk, getStatesThunk, getStateFireCountThunk,
+} from './Thunks';
 
 const CountrySlice = createSlice({
   name: 'country',
@@ -24,16 +26,17 @@ const CountrySlice = createSlice({
       stateCount: [],
     }),
     [getStateFireCountThunk.fulfilled]: (state, { payload }) => {
-      if (payload.fires)
-      return {
-        ...state,
-        stateCount: [...state.stateCount, payload]
+      if (payload.fires) {
+        return {
+          ...state,
+          stateCount: [...state.stateCount, payload],
+        };
       }
       return {
         ...state,
-      }
+      };
     },
-    
+
   },
 });
 

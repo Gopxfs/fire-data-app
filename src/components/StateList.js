@@ -13,12 +13,19 @@ const StateList = () => {
     if (statesData.length && !statesCount.length) {
       statesData.forEach((state) => {
         dispatch(getStateFireCountThunk(state));
-      })
+      });
     }
   });
 
   statesCount.forEach((state) => {
-    statesList.push(<li>{state.state}: {state.fires}</li>);
+    statesList.push(
+      <li>
+        {state.state}
+        :
+        {' '}
+        {state.fires}
+      </li>,
+    );
   });
 
   return (
