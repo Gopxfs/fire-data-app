@@ -1,7 +1,12 @@
 import StateList from '../components/StateList';
+import CountryData from '../components/CountryData';
 
 const CountryPage = () => (
-  <StateList />
+  <>
+    <CountryData />
+    <p>Individual state contribution:</p>
+    <StateList />
+  </>
 );
 
 export default CountryPage;

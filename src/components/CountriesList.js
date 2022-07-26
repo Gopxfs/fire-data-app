@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getCountryFireCountThunk, getCountriesThunk, getStatesThunk } from '../redux/Thunks';
+import { updateTotalFires } from '../redux/CountrySlice';
 
 let load = true;
 
@@ -36,7 +37,7 @@ const CountriesList = () => {
     );
     counter += country[1];
   });
-
+  if (counter > 0) dispatch(updateTotalFires(counter));
   return (
     <>
       <h2>
