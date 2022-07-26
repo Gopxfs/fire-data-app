@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getCountryFireCountThunk, getCountriesThunk, getStatesThunk } from '../redux/Thunks';
-import { updateTotalFires } from '../redux/CountrySlice';
 import { useEffect } from 'react';
+import { getCountryFireCountThunk, getCountriesThunk, getStatesThunk } from '../redux/Thunks';
+import { updateTotalFires, sortCountriesList } from '../redux/CountrySlice';
 
 let load = true;
 
@@ -25,6 +25,7 @@ const CountriesList = () => {
   const countryCount = useSelector((state) => state.country.countryCount);
   const countryList = [];
   let counter = 0;
+
   countryCount.forEach((country) => {
     countryList.push(
       <li key={country[0]}>
@@ -38,9 +39,11 @@ const CountriesList = () => {
     );
     counter += country[1];
   });
+
   useEffect(() => {
     if (counter > 0) dispatch(updateTotalFires(counter));
   });
+
   return (
     <>
       <h2>
@@ -49,13 +52,12 @@ const CountriesList = () => {
       </h2>
       <div>
         <p>STATS BY COUNTRY</p>
-        <label>Sort by
-          <select>
-            <option>None</option>
-            <option>Ascending</option>
-            <option>Descending</option>
-          </select>
-        </label>
+        <select onChange={(e) => { dispatch(sortCountriesList(e.target.value)); }} defaultValue="">
+          <option value="" disabled hidden>Sort by</option>
+          <option value="none">None</option>
+          <option value="higher">Higher first</option>
+          <option value="lower">Lower first</option>
+        </select>
       </div>
       <ul>
         {countryList}
