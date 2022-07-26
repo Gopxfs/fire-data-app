@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getCountryFireCountThunk, getCountriesThunk, getStatesThunk } from './Thunks';
+import { getCountryFireCountThunk, getCountriesThunk, getStatesThunk, getStateFireCountThunk } from './Thunks';
 
 const CountrySlice = createSlice({
   name: 'country',
@@ -7,6 +7,7 @@ const CountrySlice = createSlice({
     countryCount: [],
     countriesList: [],
     countryStates: [],
+    stateCount: [],
   },
   extraReducers: {
     [getCountryFireCountThunk.fulfilled]: (state, { payload }) => ({
@@ -20,7 +21,19 @@ const CountrySlice = createSlice({
     [getStatesThunk.fulfilled]: (state, { payload }) => ({
       ...state,
       countryStates: payload,
+      stateCount: [],
     }),
+    [getStateFireCountThunk.fulfilled]: (state, { payload }) => {
+      if (payload.fires)
+      return {
+        ...state,
+        stateCount: [...state.stateCount, payload]
+      }
+      return {
+        ...state,
+      }
+    },
+    
   },
 });
 
