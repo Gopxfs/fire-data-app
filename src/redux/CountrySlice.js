@@ -13,9 +13,9 @@ const CountrySlice = createSlice({
     totalFires: 0,
     currentCountry: 'This country',
     currentCountryFires: 0,
-    },
+  },
   reducers: {
-    updateTotalFires (state, { payload }) {
+    updateTotalFires(state, { payload }) {
       return {
         ...state,
         totalFires: payload,
@@ -44,7 +44,7 @@ const CountrySlice = createSlice({
           ...state,
           stateCount: [...state.stateCount, payload],
           currentCountry: payload.country,
-          currentCountryFires: state.currentCountryFires+payload.fires,
+          currentCountryFires: state.currentCountryFires + payload.fires,
         };
       }
       return {

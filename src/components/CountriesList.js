@@ -37,8 +37,7 @@ const CountriesList = () => {
     );
     counter += country[1];
   });
-  if (counter > 0)
-  dispatch(updateTotalFires(counter));
+  if (counter > 0) dispatch(updateTotalFires(counter));
   return (
     <>
       <h2>
