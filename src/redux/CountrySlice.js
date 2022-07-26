@@ -3,6 +3,28 @@ import {
   getCountryFireCountThunk, getCountriesThunk, getStatesThunk, getStateFireCountThunk,
 } from './Thunks';
 
+const sortList = (list, reversed) => {
+  let sortedCount = [];
+  const sortedCountries = [];
+
+  list.forEach((country) => {
+    sortedCount.push(country[1]);
+  });
+
+  sortedCount.sort((a, b) => b - a);
+  sortedCount = [...new Set(sortedCount)];
+  sortedCount.forEach((count) => {
+    for (let i = 0; i < list.length; i += 1) {
+      if (list[i][1] === count) {
+        sortedCountries.push(list[i]);
+      }
+    }
+  });
+
+  if (reversed) return sortedCountries.reverse();
+  return sortedCountries;
+};
+
 const CountrySlice = createSlice({
   name: 'country',
   initialState: {
@@ -16,32 +38,17 @@ const CountrySlice = createSlice({
   },
   reducers: {
     sortCountriesList(state, { payload }) {
-      let sortedCount = [];
       const countryList = [...state.countryCount];
-      const sortedCountries = [];
-
-      countryList.forEach((country) => {
-        sortedCount.push(country[1]);
-      });
-      sortedCount.sort((a, b) => b - a);
-      sortedCount = [...new Set(sortedCount)];
-      sortedCount.forEach((count) => {
-        for (let i = 0; i < countryList.length; i += 1) {
-          if (countryList[i][1] === count) {
-            sortedCountries.push(countryList[i]);
-          }
-        }
-      });
 
       if (payload === 'higher') {
         return {
           ...state,
-          countryCount: sortedCountries,
+          countryCount: sortList(countryList, false),
         };
       }
       return {
         ...state,
-        countryCount: sortedCountries.reverse(),
+        countryCount: sortList(countryList, true),
       };
     },
     updateTotalFires(state, { payload }) {
