@@ -1,7 +1,11 @@
 import StateList from '../components/StateList';
+import CountryData from '../components/CountryData';
 
 const CountryPage = () => (
-  <StateList />
+  <>
+    <StateList />
+    <CountryData />
+  </>
 );
 
 export default CountryPage;
