@@ -11,6 +11,7 @@ const CountrySlice = createSlice({
     countryStates: [],
     stateCount: [],
     totalFires: 0,
+    currentCountry: 'This country',
     currentCountryFires: 0,
     },
   reducers: {
@@ -34,6 +35,7 @@ const CountrySlice = createSlice({
       ...state,
       countryStates: payload,
       stateCount: [],
+      currentCountry: 'This country',
       currentCountryFires: 0,
     }),
     [getStateFireCountThunk.fulfilled]: (state, { payload }) => {
@@ -41,6 +43,7 @@ const CountrySlice = createSlice({
         return {
           ...state,
           stateCount: [...state.stateCount, payload],
+          currentCountry: payload.country,
           currentCountryFires: state.currentCountryFires+payload.fires,
         };
       }
