@@ -15,6 +15,33 @@ const CountrySlice = createSlice({
     currentCountryFires: 0,
   },
   reducers: {
+    sortCountriesList(state, { payload }) {
+      let sortedCount = [];
+      const countryList = [...state.countryCount];
+      let sortedCountries = [];
+      if (payload === 'none') {
+        sortedCountries = countryList;
+      } else if (payload === 'higher') {
+        countryList.forEach((country) => {
+          sortedCount.push(country[1]);
+        });
+        sortedCount.sort((a, b) => b - a);
+        sortedCount = [...new Set(sortedCount)];
+        sortedCount.forEach((count) => {
+          for (let i = 0; i < countryList.length; i += 1) {
+            if (countryList[i][1] === count) {
+              sortedCountries.push(countryList[i]);
+            }
+          }
+        });
+      } else if (payload === 'lower') {
+
+      }
+      return {
+        ...state,
+        countryCount: sortedCountries,
+      };
+    },
     updateTotalFires(state, { payload }) {
       return {
         ...state,
@@ -55,6 +82,6 @@ const CountrySlice = createSlice({
   },
 });
 
-export const { updateTotalFires } = CountrySlice.actions;
+export const { updateTotalFires, sortCountriesList } = CountrySlice.actions;
 
 export default CountrySlice.reducer;
