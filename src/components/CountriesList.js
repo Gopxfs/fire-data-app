@@ -54,7 +54,6 @@ const CountriesList = () => {
         <p>STATS BY COUNTRY</p>
         <select onChange={(e) => { dispatch(sortCountriesList(e.target.value)); }} defaultValue="">
           <option value="" disabled hidden>Sort by</option>
-          <option value="none">None</option>
           <option value="higher">Higher first</option>
           <option value="lower">Lower first</option>
         </select>
