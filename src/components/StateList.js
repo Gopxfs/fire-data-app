@@ -19,7 +19,7 @@ const StateList = () => {
 
   statesCount.forEach((state) => {
     statesList.push(
-      <li>
+      <li key={state.state}>
         {state.state}
         :
         {' '}

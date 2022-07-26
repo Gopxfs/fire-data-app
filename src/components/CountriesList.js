@@ -27,7 +27,7 @@ const CountriesList = () => {
   let counter = 0;
   countryCount.forEach((country) => {
     countryList.push(
-      <li>
+      <li key={country[0]}>
         <Link to="country" onClick={() => { dispatch(getStatesThunk(getCountryID(country[0], IDList))); }}>
           {country[0]}
           :
