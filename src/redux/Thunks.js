@@ -31,6 +31,7 @@ export const getStateFireCountThunk = createAsyncThunk(
     return {
       state: stateName,
       fires: response[countryName],
+      country: countryName,
     };
   },
 );
