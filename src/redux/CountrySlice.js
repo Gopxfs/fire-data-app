@@ -18,28 +18,30 @@ const CountrySlice = createSlice({
     sortCountriesList(state, { payload }) {
       let sortedCount = [];
       const countryList = [...state.countryCount];
-      let sortedCountries = [];
-      if (payload === 'none') {
-        sortedCountries = countryList;
-      } else if (payload === 'higher') {
-        countryList.forEach((country) => {
-          sortedCount.push(country[1]);
-        });
-        sortedCount.sort((a, b) => b - a);
-        sortedCount = [...new Set(sortedCount)];
-        sortedCount.forEach((count) => {
-          for (let i = 0; i < countryList.length; i += 1) {
-            if (countryList[i][1] === count) {
-              sortedCountries.push(countryList[i]);
-            }
-          }
-        });
-      } else if (payload === 'lower') {
+      const sortedCountries = [];
 
+      countryList.forEach((country) => {
+        sortedCount.push(country[1]);
+      });
+      sortedCount.sort((a, b) => b - a);
+      sortedCount = [...new Set(sortedCount)];
+      sortedCount.forEach((count) => {
+        for (let i = 0; i < countryList.length; i += 1) {
+          if (countryList[i][1] === count) {
+            sortedCountries.push(countryList[i]);
+          }
+        }
+      });
+
+      if (payload === 'higher') {
+        return {
+          ...state,
+          countryCount: sortedCountries,
+        };
       }
       return {
         ...state,
-        countryCount: sortedCountries,
+        countryCount: sortedCountries.reverse(),
       };
     },
     updateTotalFires(state, { payload }) {
