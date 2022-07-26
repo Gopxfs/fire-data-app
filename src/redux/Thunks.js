@@ -14,14 +14,16 @@ export const getCountriesThunk = createAsyncThunk(
   async () => {
     const response = await fetch('https://queimadas.dgi.inpe.br/api/auxiliar/paises')
       .then((response) => response.json());
-      return response;
-  }
+    return response;
+  },
 );
 
 export const getStatesThunk = createAsyncThunk(
   'fireData/getStates',
   async (id) => {
-    console.log(id);
+    const response = await fetch(`https://queimadas.dgi.inpe.br/api/auxiliar/estados?pais_id=${id}`)
+      .then((response) => response.json());
+    return response;
   },
 );
 
