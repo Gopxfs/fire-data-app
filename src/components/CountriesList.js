@@ -47,7 +47,16 @@ const CountriesList = () => {
         Daily focused fire count in South America:
         {counter}
       </h2>
-      <p>STATS BY COUNTRY</p>
+      <div>
+        <p>STATS BY COUNTRY</p>
+        <label>Sort by
+          <select>
+            <option>None</option>
+            <option>Ascending</option>
+            <option>Descending</option>
+          </select>
+        </label>
+      </div>
       <ul>
         {countryList}
       </ul>
