@@ -18,6 +18,20 @@ export const getCountriesThunk = createAsyncThunk(
   },
 );
 
+export const getStateFireCountThunk = createAsyncThunk(
+  'fireData/getStateDate',
+  async (data) => {
+    const {pais_id, estado_id, pais_name, estado_name} = data;
+    const response = await fetch(`https://queimadas.dgi.inpe.br/api/focos/count?pais_id=${pais_id}&estado_id=${estado_id}`)
+      .then((response) => response.json());
+
+      return {
+        state: estado_name,
+        fires: response[pais_name],
+      }
+  }
+);
+
 export const getStatesThunk = createAsyncThunk(
   'fireData/getStates',
   async (id) => {
