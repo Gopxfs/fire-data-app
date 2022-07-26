@@ -3,8 +3,9 @@ import CountryData from '../components/CountryData';
 
 const CountryPage = () => (
   <>
-    <StateList />
     <CountryData />
+    <p>Individual state contribution:</p>
+    <StateList />
   </>
 );
 
