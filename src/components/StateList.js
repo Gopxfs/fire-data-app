@@ -19,9 +19,12 @@ const StateList = () => {
   });
 
   statesCount.forEach((state) => {
+    let formatedStateName = state.state.substring(1);
+    formatedStateName = formatedStateName.toLowerCase();
+    formatedStateName = state.state[0] + formatedStateName;
     statesList.push(
       <li key={state.state}>
-        {state.state}
+        {formatedStateName}
         :
         {' '}
         {state.fires}
