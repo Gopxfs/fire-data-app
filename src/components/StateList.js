@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getStateFireCountThunk } from '../redux/Thunks';
+import { sortStatesList } from '../redux/CountrySlice';
 
 const StateList = () => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const StateList = () => {
 
   statesCount.forEach((state) => {
     statesList.push(
-      <li>
+      <li key={state.state}>
         {state.state}
         :
         {' '}
@@ -29,9 +30,16 @@ const StateList = () => {
   });
 
   return (
-    <ul>
-      {statesList}
-    </ul>
+    <>
+      <select onChange={(e) => { dispatch(sortStatesList(e.target.value)); }} defaultValue="">
+        <option value="" disabled hidden>Sort by</option>
+        <option value="higher">Higher first</option>
+        <option value="lower">Lower first</option>
+      </select>
+      <ul>
+        {statesList}
+      </ul>
+    </>
   );
 };
 
