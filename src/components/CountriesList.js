@@ -45,10 +45,13 @@ const CountriesList = () => {
   });
 
   return (
-    <>
+    <main>
       <h2>
-        Daily focused fire count in South America:
-        {counter}
+        <p>
+          {` ${counter}`}
+          <br />
+        </p>
+        Fires detected in South America
       </h2>
       <div>
         <p>STATS BY COUNTRY</p>
@@ -61,7 +64,7 @@ const CountriesList = () => {
       <ul>
         {countryList}
       </ul>
-    </>
+    </main>
   );
 };
 
