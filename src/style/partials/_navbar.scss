@@ -17,8 +17,22 @@ nav {
   .openHamburger {
     background-image: url(../images/close-button.png);
   }
+}
+
+#navLinks {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 45px;
+  left: 0;
+  width: 150px;
+  height: 100px;
+  background-color: #ec4c89e0;
 
   a {
-    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 8%;
+    margin-top: 6%;
   }
 }
