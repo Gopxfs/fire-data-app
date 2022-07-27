@@ -1,14 +1,4 @@
 @import 'variables/colors';
+@import './variables/fonts';
+@import './partials/general';
 @import './partials/navbar';
-
-body {
-  margin: 0;
-
-  * {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-  }
-}
