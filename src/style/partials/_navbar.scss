@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  gap: 5%;
+  background-color: $darkPink;
+  padding: 10px;
+
+  .hamburger {
+    height: 25px;
+    width: 25px;
+    background-image: url(../images/hamburger.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .openHamburger {
+    background-image: url(../images/close-button.png);
+  }
+
+  a {
+    color: #fff;
+  }
+}
