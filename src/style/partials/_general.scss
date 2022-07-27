@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: $mainPink;
 
   * {
     border: 0;
@@ -8,5 +9,10 @@ body {
     font-family: $mainFont;
     list-style: none;
     text-decoration: none;
+    color: #fff;
   }
+}
+
+.hidden {
+  display: none;
 }
