@@ -12,9 +12,15 @@ const FunctionalitySlice = createSlice({
         isHamburgerOpened: !state.isHamburgerOpened,
       };
     },
+    closeHamburger(state) {
+      return {
+        ...state,
+        isHamburgerOpened: false,
+      };
+    },
   },
 });
 
-export const { toggleHamburger } = FunctionalitySlice.actions;
+export const { toggleHamburger, closeHamburger } = FunctionalitySlice.actions;
 
 export default FunctionalitySlice.reducer;
