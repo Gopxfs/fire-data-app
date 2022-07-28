@@ -1,5 +1,7 @@
 nav {
   display: flex;
+  position: fixed;
+  width: 100%;
   gap: 5%;
   background-color: $darkPink;
   padding: 10px;
