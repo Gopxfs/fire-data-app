@@ -34,11 +34,14 @@ const StateList = () => {
 
   return (
     <>
-      <select onChange={(e) => { dispatch(sortStatesList(e.target.value)); }} defaultValue="">
-        <option value="" disabled hidden>Sort by</option>
-        <option value="higher">Higher first</option>
-        <option value="lower">Lower first</option>
-      </select>
+      <div className="listHeader">
+        <p>Individual state contribution:</p>
+        <select className="sortBox" onChange={(e) => { dispatch(sortStatesList(e.target.value)); }} defaultValue="">
+          <option value="" disabled hidden>Sort by</option>
+          <option value="higher">Higher first</option>
+          <option value="lower">Lower first</option>
+        </select>
+      </div>
       <ul>
         {statesList}
       </ul>

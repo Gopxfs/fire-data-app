@@ -29,11 +29,13 @@ const CountriesList = () => {
   countryCount.forEach((country) => {
     countryList.push(
       <li key={country[0]}>
-        <Link to="country" onClick={() => { dispatch(getStatesThunk(getCountryID(country[0], IDList))); }}>
-          {country[0]}
-          :
-          {' '}
-          {country[1]}
+        <Link className="countries" to="country" onClick={() => { dispatch(getStatesThunk(getCountryID(country[0], IDList))); }}>
+          <div>
+            {country[0]}
+            :
+            {' '}
+            {country[1]}
+          </div>
         </Link>
       </li>,
     );
@@ -53,9 +55,9 @@ const CountriesList = () => {
         </p>
         Fires detected in South America
       </h2>
-      <div>
-        <p>STATS BY COUNTRY</p>
-        <select onChange={(e) => { dispatch(sortCountriesList(e.target.value)); }} defaultValue="">
+      <div className="listHeader">
+        <p>Stats by country</p>
+        <select className="sortBox" onChange={(e) => { dispatch(sortCountriesList(e.target.value)); }} defaultValue="">
           <option value="" disabled hidden>Sort by</option>
           <option value="higher">Higher first</option>
           <option value="lower">Lower first</option>
