@@ -33,7 +33,7 @@ const StateList = () => {
   });
 
   return (
-    <>
+    <section id="states">
       <div className="listHeader">
         <p>Individual state contribution:</p>
         <select className="sortBox" onChange={(e) => { dispatch(sortStatesList(e.target.value)); }} defaultValue="">
@@ -45,7 +45,7 @@ const StateList = () => {
       <ul>
         {statesList}
       </ul>
-    </>
+    </section>
   );
 };
 
