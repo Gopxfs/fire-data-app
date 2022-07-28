@@ -19,9 +19,12 @@ const StateList = () => {
   });
 
   statesCount.forEach((state) => {
+    let formatedStateName = state.state.substring(1);
+    formatedStateName = formatedStateName.toLowerCase();
+    formatedStateName = state.state[0] + formatedStateName;
     statesList.push(
       <li key={state.state}>
-        {state.state}
+        {formatedStateName}
         :
         {' '}
         {state.fires}
@@ -30,16 +33,19 @@ const StateList = () => {
   });
 
   return (
-    <>
-      <select onChange={(e) => { dispatch(sortStatesList(e.target.value)); }} defaultValue="">
-        <option value="" disabled hidden>Sort by</option>
-        <option value="higher">Higher first</option>
-        <option value="lower">Lower first</option>
-      </select>
+    <section id="states">
+      <div className="listHeader">
+        <p>Individual state contribution:</p>
+        <select className="sortBox" onChange={(e) => { dispatch(sortStatesList(e.target.value)); }} defaultValue="">
+          <option value="" disabled hidden>Sort by</option>
+          <option value="higher">Higher first</option>
+          <option value="lower">Lower first</option>
+        </select>
+      </div>
       <ul>
         {statesList}
       </ul>
-    </>
+    </section>
   );
 };
 

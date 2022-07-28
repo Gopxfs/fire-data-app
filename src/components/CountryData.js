@@ -8,13 +8,17 @@ const CountryData = () => {
 
   return (
     <>
-      <h2>
+      <h2 id="stateHeader">
         {country}
         {' '}
         currently corresponds to
         {' '}
-        {(Math.round(percentage * 100) / 100).toFixed(2)}
-        % of the total fire cases.
+        <p>
+          {(Math.round(percentage * 100) / 100).toFixed(2)}
+          %
+        </p>
+        {' '}
+        of the total fire cases.
       </h2>
     </>
   );
