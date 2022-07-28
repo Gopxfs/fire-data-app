@@ -1,5 +1,5 @@
 # Fire Data
-This application gathers data from the [INPE API](https://queimadas.dgi.inpe.br/queimadas/dados-abertos/#), showcasing the number of daily focused fires in South America. The user can select the country, state, and city for more specific information.
+This application gathers data from the [INPE API](https://queimadas.dgi.inpe.br/queimadas/dados-abertos/#), showcasing the number of daily focused fires in South America. The user can select the country, state for more specific information.
 
 ## Built With:
 - React & Redux
@@ -7,8 +7,11 @@ This application gathers data from the [INPE API](https://queimadas.dgi.inpe.br/
 - SCSS
 - JavaScript
 
-## Live demo:
-Not ready for deployment.
+## Video introducing to the project:
+[Loom](https://www.loom.com/share/a28d490fd3c049ffb3a10e11e9cc480f)
+
+## Live Demo:
+[Live Demo](https://fire-data.herokuapp.com/)
 
 ## Getting Started:
 To access and change the code on your computer (using GIT):
@@ -28,6 +31,9 @@ To edit this project:
 :bust_in_silhouette: Gabriel Fonseca
 - Github: [@Gopxfs](https://github.com/Gopxfs)
 - Linkedin: [Gabriel Fonseca](https://www.linkedin.com/in/gabriel-fonseca-sales-8bb64b236/)
+
+## Acknowledgements
+Design inspired by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) under [Creative Commons License](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ## :star2: Show your support
 Give a :star: if you like my project!
