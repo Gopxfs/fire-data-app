@@ -1,0 +1,27 @@
+#stateHeader {
+  padding: 2%;
+  margin-bottom: -18px;
+  text-align: center;
+
+  p {
+    color: yellow;
+  }
+}
+
+#states {
+  padding: 2%;
+  ul {
+    border: 3px solid $darkPink;
+    border-radius: 5px;
+  }
+
+  li {
+    font-size: 20px;
+    padding: 25px 10px;
+    background-color: $darkerPink;
+  }
+
+  li:nth-child(2n) {
+    background-color: $mainPink;
+  }
+}
