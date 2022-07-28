@@ -12,7 +12,6 @@ const CountryPage = () => {
         <Link to="/" onClick={() => dispatch(closeHamburger())}>Back to homepage</Link>
       </div>
       <CountryData />
-      <p>Individual state contribution:</p>
       <StateList />
     </>
   );
