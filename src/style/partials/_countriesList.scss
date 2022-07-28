@@ -14,17 +14,16 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5%;
-    margin-bottom: 175px;
+    margin-bottom: 225px;
   }
 }
 
 .countries {
-  width: 50%;
-  
+  width: 50%;  
 
   .country {
     display: grid;
-    gap: 0;
+    max-width: 250px;
     font-size: 22px;
     height: 150px;
     background-color: $darkerPink;
