@@ -8,13 +8,21 @@ const Navbar = () => {
 
   return (
     <nav>
+      <div id="navDesktop" className="desktop">
+        <NavLink to="/">
+          Homepage
+        </NavLink>
+        <NavLink to="/about">
+          About
+        </NavLink>
+      </div>
       {isHamburgerOpened
         ? (
           <>
             <button type="button" className="hamburger" onClick={() => { dispatch(toggleHamburger()); }}> </button>
             <div id="navLinks" className="hidden">
               <NavLink to="/">
-                HomePage
+                Homepage
               </NavLink>
               <NavLink to="/about">
                 About

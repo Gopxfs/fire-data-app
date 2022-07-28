@@ -39,3 +39,28 @@ nav {
     margin-top: 6%;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    padding: 15px;
+
+    a {
+      font-size: 18px;
+    }
+
+    a:hover {
+      color: $mainPink;
+    }
+  }
+
+  #navDesktop {
+    display: flex;
+    gap: 25%;
+    margin-left: auto;
+    margin-right: 10%;
+  }
+}

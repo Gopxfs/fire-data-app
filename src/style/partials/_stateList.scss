@@ -26,3 +26,19 @@
     background-color: $mainPink;
   }
 }
+
+@media screen and (min-width: 768px) {
+  #stateHeader {
+    margin-bottom: -50px;
+  }
+
+  #states {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      align-self: center;
+      width: 66%;
+    }
+  }
+}

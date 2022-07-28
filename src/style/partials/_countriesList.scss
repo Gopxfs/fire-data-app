@@ -58,3 +58,23 @@ main {
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  main {
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      gap: 2%;
+      width: 75%;
+
+      li {
+        margin-bottom: 25px;
+        width: 250px;
+      }
+    }
+  }
+}

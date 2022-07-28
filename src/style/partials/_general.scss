@@ -13,7 +13,8 @@ body {
   }
 }
 
-.hidden {
+.hidden,
+.desktop {
   display: none;
 }
 
@@ -23,5 +24,15 @@ body {
 
   a {
     font-size: 18px;
+  }
+
+  a:hover {
+    color: $mainPink;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .backToHomepage {
+    padding: 15px;
   }
 }
