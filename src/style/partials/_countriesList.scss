@@ -1,0 +1,47 @@
+main {
+  padding: 2%;
+
+  h2 {
+    margin-top: 50px;
+    text-align: center;
+
+    p {
+      color: yellow;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    margin-bottom: 175px;
+  }
+}
+
+.countries {
+  width: 50%;
+
+  div {
+    height: 100px;
+    background-color: rgb(17, 66, 66);
+  }
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4%;
+  margin: 25px 0;
+
+  p {
+    font-size: 20px;
+  }
+
+  .sortBox {
+    padding: 10px 2px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px $darkPink;
+    background-color: $darkPink;
+  }
+}
