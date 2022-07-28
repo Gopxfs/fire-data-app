@@ -32,6 +32,9 @@ To edit this project:
 - Github: [@Gopxfs](https://github.com/Gopxfs)
 - Linkedin: [Gabriel Fonseca](https://www.linkedin.com/in/gabriel-fonseca-sales-8bb64b236/)
 
+## Acknowledgements
+Design inspired by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) under [Creative Commons License](https://creativecommons.org/licenses/by-nc/4.0/).
+
 ## :star2: Show your support
 Give a :star: if you like my project!
 
