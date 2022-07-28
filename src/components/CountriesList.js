@@ -30,11 +30,14 @@ const CountriesList = () => {
     countryList.push(
       <li key={country[0]}>
         <Link className="countries" to="country" onClick={() => { dispatch(getStatesThunk(getCountryID(country[0], IDList))); }}>
-          <div>
-            {country[0]}
-            :
-            {' '}
-            {country[1]}
+          <div className="country">
+            <p>
+              {country[0]}
+              :
+              {' '}
+              {country[1]}
+            </p>
+            <div className={`${country[0]} flag`} />
           </div>
         </Link>
       </li>,
