@@ -7,8 +7,11 @@ This application gathers data from the [INPE API](https://queimadas.dgi.inpe.br/
 - SCSS
 - JavaScript
 
-## Live demo:
-Not ready for deployment.
+## Video introducing to the project:
+[Loom](https://www.loom.com/share/a28d490fd3c049ffb3a10e11e9cc480f)
+
+## Live Demo:
+[Live Demo](https://fire-data.herokuapp.com/)
 
 ## Getting Started:
 To access and change the code on your computer (using GIT):
