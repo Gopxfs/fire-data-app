@@ -20,10 +20,24 @@ main {
 
 .countries {
   width: 50%;
+  
 
-  div {
-    height: 100px;
-    background-color: rgb(17, 66, 66);
+  .country {
+    display: grid;
+    gap: 0;
+    font-size: 22px;
+    height: 150px;
+    background-color: $darkerPink;
+    
+    * {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    p {
+      margin: auto;
+      z-index: 1;
+    }
   }
 }
 
