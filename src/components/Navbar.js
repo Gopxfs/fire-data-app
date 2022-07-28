@@ -19,7 +19,7 @@ const Navbar = () => {
       {isHamburgerOpened
         ? (
           <>
-            <button type="button" className="hamburger" onClick={() => { dispatch(toggleHamburger()); }}> </button>
+            <button type="button" className="hamburger openHamburger" onClick={() => { dispatch(toggleHamburger()); }}> </button>
             <div id="navLinks" className="hidden">
               <NavLink to="/">
                 Homepage
