@@ -6,6 +6,12 @@
   filter: grayscale(66%);
 }
 
+.flag:hover {
+  filter: grayscale(0%);
+  opacity: 100%;
+  z-index: 1;
+}
+
 .Brasil {
   background-image: url(../images/flags/brasil.png);
 }
