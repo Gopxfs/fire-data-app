@@ -1,11 +1,63 @@
 .flag {
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 250px;
   background-position: center;
-  opacity: 35%;
-  filter: grayscale(75%);
+  opacity: 33%;
+  filter: grayscale(66%);
 }
 
 .Brasil {
   background-image: url(../images/flags/brasil);
+}
+
+.Ecuador {
+  background-image: url(../images/flags/ecuador.png);
+}
+
+.Uruguay {
+  background-image: url(../images/flags/uruguay.png);
+}
+
+.Argentina {
+  background-image: url(../images/flags/argentina.png);
+}
+
+.Bolivia {
+  background-image: url(../images/flags/bolivia.png);
+}
+
+.Falkland {
+  background-image: url(../images/flags/falkland_islands.jpeg);
+}
+
+.French {
+  background-image: url(../images/flags/french_guiana.png);
+}
+
+.Guyana {
+  background-image: url(../images/flags/guyana.png);
+}
+
+.Chile {
+  background-image: url(../images/flags/chile.png);
+}
+
+.Colombia {
+  background-image: url(../images/flags/colombia.png);
+}
+
+.Venezuela {
+  background-image: url(../images/flags/venezuela.png);
+}
+
+.Paraguay {
+  background-image: url(../images/flags/paraguay.svg);
+}
+
+.Peru {
+  background-image: url(../images/flags/peru.png);
+}
+
+.Suriname {
+  background-image: url(../images/flags/suriname.png);
 }
